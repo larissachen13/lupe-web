@@ -1,0 +1,268 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>  LUPE | {{full_name}} </title> 
+
+	<link rel="stylesheet" href="/professional/css/normalize.css"> 
+	<link rel="stylesheet" href="/professional/css/bootstrap.css"> 
+  <link rel="stylesheet" href="/professional/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/professional/css/lightcase.css"> 
+  <link rel="stylesheet" href="/professional/owl-carousel/owl.carousel.css"> 
+  <link rel="stylesheet" href="/professional/owl-carousel/owl.theme.css"> 
+	<link rel="stylesheet" href="/professional/css/style.css"> 
+
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,400italic|Josefin+Sans:400,400italic, 700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,500, 700, 800, 900|Raleway+Dots|Playfair+Display: 400, 400italic, 700|Josefin+Slab:400,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto:400,500|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+	<script src="/professional/js/jquery.js"> </script> 
+	<script src="/professional/js/index.js"> </script>
+	<script src="/professional/js/lightcase.js"> </script> 
+	<script src="/professional/js/bootstrap.js"> </script> 
+  <script src="/professional/owl-carousel/owl.carousel.js"> </script> 
+</head> 
+
+<body>
+  <header>
+    <div class="row">
+      <div class="col-sm-2 col-sm-offset-1 col-xs-6"> 
+        <div class="logo-div col-sm-8"> 
+          <a target="_blank" href="http://www.lupeapp.com/"> <img class= "logo img-responsive" src="/professional/images/logo-lupe-bw.png"/> </a> 
+        </div> 
+      </div>      
+      <ul class="col-sm-9 col-xs-12 col-xs-offset-0 menu lato"> 
+        <li class="default"> <a href="#profile"> Perfil </a> </li> 
+        <li> <a href="#gallery"> Galería </a> </li> 
+        <li> <a href="#services"> Servicios </a> </li> 
+        <li> <a href="#delivery"> Areas de Coberturas </a> </li> 
+        <li> <a href="#reviews"> Referencias </a> </li> 
+      </ul>
+    </div> 
+  </header> 
+
+  <div class="container-fluid" itemscope itemtype="http://schema.org/Person"> 
+
+    <div class="row" id="profile"> 
+
+      <div class="profile-area col-sm-9 col-centered col-xs-12">
+
+        <div class="col-sm-4 col-centered col-xs-12">
+          <img itemprop="image" alt="avatar-de-profesional"class="avatar img-circle img-rounded" src="{{avatar.medium}}"/> 
+            <div class="col-xs-10 name-block col-centered"> 
+              <h1 class="name" itemprop="name"> {{this.full_name}}</h1>  
+            </div> 
+        </div> 
+        <div class="info col-sm-8 col-sm-offset-2">
+          <a target="_blank" href="https://itunes.apple.com/ar/app/id998671245"> <div class="book col-sm-4 col-centered"> Reservar </div> </a> 
+          {{#if this.number_of_reviews}}
+            <div class="rating"> 
+              <span class="hearts"> 
+                <i class="fa fa-heart fa-lg"></i>
+              </span> 
+              <span class="number"> {{ratingValue this}}</span> 
+            </div> 
+          {{else}}
+          {{/if}}
+          <div class="bio"> 
+            <i class="fa fa-quote-left"></i>  {{bio}}  <i class="fa fa-quote-right"></i> 
+          </div>
+          <div class="summary-services col-sm-offset-2"> 
+            {{#serviceCat this}}
+              {{#each this.services.uniqueCat}}
+                <div class="individual col-sm-3"> 
+                  {{this.name}}
+                  <img class="col-sm-11 col-centered img-circle" src="{{this.image.small}}"/>
+                </div> 
+              {{/each}}
+            {{/serviceCat}}
+          </div> 
+        </div>
+
+      </div> <!-- Profile Area  -->
+
+    </div> 
+  
+  <div class="row"> 
+    <div class="content-area"> <!-- Content Area  -->
+
+      <div class="row gallery" id="gallery"> 
+        <div class="col-sm-10 col-sm-offset-1"> 
+          {{#if this.images}}
+            <div id="carousel-gallery"class="owl-carousel"> 
+            {{#each images}}
+            <a data-rel="lightcase" transition="fade" href="{{this.original}}"> 
+              <img class="img-responsive gallery-photo" src="{{this.medium}}"/> 
+            </a> 
+            {{/each}}
+          </div> 
+          {{else}}
+           {{/if}}
+        </div> 
+      </div>
+
+      <div class="row" id="services"> 
+        <div class="col-sm-10 col-sm-offset-1"> 
+          <div class="row services col-sm-offset-1"> 
+            {{#everyNth services 2}}
+              {{#if isModZeroNotFirst}}
+                </div>
+              {{/if}}
+              {{#if isModZero}}
+                <div class="row row-services">
+              {{/if}}
+              <div class="col-sm-6 service" itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer"> 
+                <meta itemprop="eligibleRegion" content="{{delivery_areas.name}}"> 
+                  <img alt="servicio-de-belleza"class="col-sm-4 img-responsive service-photo img-circle" src="{{this.category.imageData.medium}}"/>    
+                  <div class="col-sm-6">  
+                    <div class="service-info"> 
+                      <div class="service-name" itemprop="itemOffered"> <h5> {{this.category.name}} </h5></div> 
+                      <meta itemprop="priceCurrency" content="ARS"> 
+                      <span class="service-details" itemprop="price" content="{{this.price}}"> ${{this.price}} |  {{this.duration}} min.</span>
+                    </div> 
+                    <!-- <div class="service-description"> 
+                      {{#if this.description}}
+                      <span itemprop="description"> {{this.description}} </span> 
+                      {{else}}
+                      <span itemprop="description"> {{this.category.description}} </span> 
+                      {{/if}}
+                    </div>  -->
+                  </div> 
+        
+              </div> 
+                  
+    
+            {{#if isLast}}
+            </div>
+            {{/if}}
+          {{/everyNth}}
+          </div>
+        </div> 
+      </div> <!-- Services  --> 
+
+      <div class="row delivery" id="delivery"> 
+        <h3 class="title amatic"> Áreas de Coberturas <i class="fa fa-car"></i></h3>
+            <div class="row">
+              {{#sort this.delivery_areas}}
+              {{#each this}}
+                {{#if this.greaterPrice}}
+                  <div class="col-md-4 col-sm-12"> 
+                    <div class="col-sm-6"> 
+                      <span class="number"> <i class="fa fa-usd"></i> {{this.price}} </span> 
+                    </div> 
+                    <div class="list col-sm-6"> 
+                      <ul> <li> <h5 class="lato"> {{this.name}} </h5> </li> 
+                {{else}}
+                      <li> <h5 class="lato"> {{this.name }}</h5> </li> 
+                {{/if}}
+                {{#if this.lastPrice}}
+                      </ul> </div> 
+                  </div> 
+                {{/if}}
+              {{/each}}
+              {{/sort}}
+            </div>
+            
+        </div> 
+
+
+      <div class="row review" id="reviews"> 
+        <div itemprop="Brand" itemscope itemtype="http://schema.org/Brand">
+          <meta itemprop="Logo" content="{{avatar.small}}"> 
+          <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"> 
+            <meta itemprop="itemReviewed" content="{{full_name}}"> 
+            <meta itemprop="ratingCount" content="{{number_of_reviews}}"> 
+            <meta itemprop="bestRating" content="{{number_of_reviews}}"> 
+            <meta itemprop="ratingValue" content="{{amount_of_recommendations}}"> 
+          </div> 
+          {{#if this.reviews}}
+            <div class="col-sm-9 col-centered review-block"> 
+              <div class="col-sm-4 col-centered col-xs-9"> <h3 class="title"> Referencias</h4> <h4 class="from-lupe"> De Usuarios de la Comunidad Lupe</h4> </div> 
+              <div class="col-sm-5 col-sm-offset-7 col-xs-3 lato review-basis"> <span> Recomendado </span> <span> / <span> <span> No Recomendado</span>  </div> 
+              <div class="col-sm-10 col-centered each-review"> 
+                {{#each reviews}}
+                  <div class= "individual-review" itemprop="Review"itemscope itemtype="http://schema.org/Review"> 
+                    <div class="row"> 
+                      <div class="review-avatar col-sm-2 col-xs-6"> 
+                        {{#if this.client.avatar.thumbnail}}
+                          <img class="img-circle col-sm-11" src="{{this.client.avatar.thumbnail}}"/>
+                        {{else}}
+                          <img class="img-circle col-sm-11" src="/professional/images/no-avatar.png"/> 
+                        {{/if}}
+                      </div> 
+                      <div class="col-sm-7"> 
+                          <p class="lato review-name" itemprop="author"> {{this.client.name}} {{this.client.surname}} </p> 
+                          <p class="review-comment lato-small" itemprop="reviewBody"> {{this.comment}} </p> 
+                      </div> 
+                      <div class="col-sm-2 col-sm-offset-1 col-xs-6 lato recommended"> 
+                        <p> {{checkRecommended this}}</p>
+                        <!-- <i class="{{checkThumbs this}}"> </i>  -->
+                      </div> 
+                    </div> 
+                  </div> 
+                {{/each}}
+              </div> 
+            </div> <!-- Review Block  -->
+
+          {{else}}
+  
+          {{/if}}
+        </div><!--  Brand itemscope  -->
+      </div> <!-- Review Content -->   
+      
+      </div><!--  Content Area-->
+    </div><!--  Row -->
+  </div> 
+
+  <div class="row lupe-info"> 
+    <div class="col-sm-2 col-xs-6"> 
+      <img src="/professional/images/iphone.png"/> 
+    </div> 
+    <div class="col-sm-3 col-xs-6"> 
+      <img class="info-logo"src="/professional/images/logo-lupe.png"/> 
+    </div> 
+    <div class="description col-sm-4 col-sm-offset-1 col-xs-11"> 
+      <h3 class="raleway-small"> Los mejores profesionales de belleza a domicilio en 3 clicks. </h3> 
+      <ul class="lato-small"> 
+        <li> Comodo. </li> 
+        <li> Confiable. </li> 
+        <li> Seguro. </li> 
+      </ul> 
+      <div class="apple-download col-sm-6 col-xs-10"> 
+        <a target="_blank" href="https://itunes.apple.com/ar/app/id998671245" target="itunes_store">
+          <div class="button"> 
+            <i class="fa fa-apple fa-3x pull-left"></i>
+            <span id="button-1">Descárgatela gratis</span><br>
+            <b id="button-2">para iOS</b>
+          </div> 
+        </a>         
+      </div> 
+    </div> 
+  </div> 
+
+  <div class="row contact-lupe"> 
+    <h3 class="title raleway-small"> Contacto | LUPE </h3>
+    <ul class="raleway-large"> 
+      <li class="col-xs-12 col-sm-3 col-centered"> <i class="fa fa-whatsapp fa-3x"></i><a href="tel:+541140921946">       +54 11 4092 1946</a></li> 
+      <li class="col-xs-12 col-sm-3 col-centered"> <i class="fa fa-phone fa-3x"></i> <a href="tel:+541167369068">       +54 11 6736 9068 </a> </li> 
+      <li class="col-xs-12 col-sm-3 col-centered"> <i class="fa fa-envelope fa-3x"></i> <a href="mailto:hola@lupeapp.com">       hola@lupeapp.com </a> </li> 
+    </ul> 
+  </div>       
+
+  <footer> 
+    <div class="row social"> 
+     <ul> 
+        <li> <a target="_blank" href="https://www.facebook.com/lupeapp?fref=ts"> <i class="fa fa-facebook-square fa-3x"></i> </a> </li> 
+        <li> <a target="_blank" href="https://instagram.com/comunidadlupe/"> <i class="fa fa-instagram fa-3x"></i> </a> </li> 
+      </ul> 
+    </div> 
+    <div class="row signature"> 
+      <div class="lato-small"> Made with Amor <i class="fa fa-heart"></i> LC | 2015</div> 
+    </div> 
+  </footer> 
+
+</body> 
+</html> 

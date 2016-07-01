@@ -1,0 +1,639 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+/*--Header --*/
+header{
+	position:relative;
+	padding: .3% 0 0 0;
+	/*background:#606060;*/
+	background: #fff;
+	width:100%;
+}
+
+header .button{
+	color:#fff;
+	background: #172437;
+	 border-radius: 13px;
+	text-align:center;
+}
+
+header .button:hover{
+/*	background:#fbab97;*/
+	background:#fff;
+	color:#000;
+	border: 2px solid #fbab97;
+	text-align:center;
+	border-radius:13px;
+}
+
+/*header .button{
+	background:#F8F8F8;
+	color:#000;
+	border-radius:25px;
+	text-align:center;
+}*/
+.header-relative{
+	position:relative;
+}
+
+.header-fixed{
+	position:fixed;
+	z-index:3;
+}
+
+.logo{
+	/*background: #fbab97;*/
+}
+
+.logo-div a{
+	text-decoration: none;
+}
+
+ul.menu{
+	position:absolute;
+	list-style-type:none;
+	right:1%;
+	bottom:4%;
+	margin:0 0 0 0;
+}
+
+ul.menu li a{
+	text-decoration: none;
+	color:#000;
+}
+
+ul.menu li{
+	display:inline;
+	text-align:left;
+	padding: 0 0 0 0;
+	margin-right: 8%;
+}
+
+ul.menu li a:hover{
+/*	border-bottom: 4px solid #f5928f;*/
+	color:#f5928f;
+}
+
+/*Body */
+body{
+/*	background:#E8E8E8 ;*/
+}
+
+/*Profile area */
+.profile-area{
+	margin-top: 2%;
+	margin-bottom:2%;
+}
+
+.avatar{
+	max-width:95%;
+	border: 3px #fbab97 solid;
+	display: block;
+  	margin: 0 auto;
+}
+
+.name-block{
+/*	position:absolute;*/
+	margin-left: auto;
+	margin-right: auto;
+/*	left: 0;
+	right: 0;
+	bottom:13%;*/
+	text-align: center;
+	padding: 1.5% 0;
+	max-width: 95%;
+	background: rgba(255, 255, 255, .8);
+}
+.name{
+/*	margin: 0 0 0 4%;*/
+	margin: 0 0 -5% 2%;
+}
+
+#profile .info{
+	margin-top:2%;
+	text-align:center;
+}
+
+.info a{
+	text-decoration:none;
+}
+
+.book{
+	background:#fbab97;
+	color:#fff;
+	padding: 1% 0;
+	margin-bottom:2%;
+}
+
+.rating{
+	padding: 0 0;
+}
+
+.hearts .fa-heart{
+	color:#fbab97;
+}
+
+.bio{
+	margin:3% 0;
+}
+
+.summary-services{
+	margin-top:1%;
+}
+
+.summary-services .individual{
+	padding: 0 0;
+}
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*Content*/
+.content-area{
+	padding: 1% 0;
+}
+
+.content-area > div{
+	margin: 2% 0;
+}
+
+.container-fluid{
+	margin-bottom: 10px;
+}
+
+/*Service */
+#services{
+	padding: 1% 0 0 0;
+}
+.service-photo{
+	display:inline-block;
+	margin:0 auto 2% auto;
+	margin-top: 5%;
+}
+
+ .opaque{
+ 	opacity: .25;
+ }
+
+.service{
+	text-align:center;
+	margin: 0 0 1% 0;
+
+}
+
+.service-info{
+	/*border: 1px solid #C0C0C0;
+	margin: 0 -1%;
+	background: #fff;*/
+	margin-top: 30%;
+}
+
+.service-description span{
+	display: table-cell;
+  	vertical-align: middle;
+}
+
+.service-description{
+	background:#fff;
+	border-left: 1px solid #C0C0C0;
+	border-right:1px solid #C0C0C0;
+	border-bottom:1px solid #C0C0C0;
+	margin:0 -1%;
+	text-align:center;
+}
+
+.service-name{
+	margin:0 0 -3% 0;
+}
+
+.contact-icons{
+	margin-top: 1%;
+}
+
+/*Gallery */
+.gallery{
+	background:#F8F8F8;
+	padding: 2em 0 2em 0;
+	width:100%;
+}
+
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: .9;
+	text-decoration: none;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+  color:#f5928f;
+  background:#fff;
+  opacity:.5;
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  left: -55px;
+  top: 50%; 
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  right: -30px;
+  top: 50%;
+}
+/*Delivery Areas */
+
+#delivery .title{
+/*	background:#f5928f;*/
+	margin-bottom:1%;
+	padding:1% 0;
+}
+
+#delivery .title i{
+	margin-left: 2%;
+	color:#585858 ;
+}
+#delivery{
+	text-align:center;
+	background:#F8F8F8;
+}
+
+#delivery .number{
+	font-size: 4em;
+}
+
+#delivery .list ul{
+	list-style: none;
+	display:inline;
+	margin-left:-3%;
+}
+
+#delivery .list li p{
+	font-size: .088em;
+}
+
+#delivery .number i{
+	font-size: .2em;
+}
+
+
+/*Reviews*/
+.review-block{
+	/*background: #C0BDA5;*/
+/*	padding:1% 0 0 0;*/
+	position:relative;
+}
+/*
+.add-review{
+	position:absolute;
+	top: 35px;
+	left: 15px;
+	background: #282828;
+	color:#fff;
+	padding: 1.7% 2.65%;
+}
+*/
+.review-basis{
+	text-align:center;
+	/*position:absolute;
+	top:100px;
+	right:0px;
+	margin-right:-10%;*/
+}
+
+#reviews .title{
+	padding: 2% 0;
+
+}
+.each-review{
+	margin-top: 4%;
+}
+.individual-review{
+	margin:1% 0 1% 0;
+	padding: 0 0 3% 0;
+	border-bottom: 2px solid #ADAA94;
+}
+
+.review-name{
+	margin-bottom: 0;
+}
+
+.review-comment{
+}
+
+.recommended{
+	text-align: right;
+}
+
+.review-avatar > img{
+	max-width: 100%;
+}
+
+.recommended i {color:#BF948D;}
+.vacant{
+	padding: 3% 0 3% 0;
+	text-align:center;
+	background:#DDDDDD;
+}
+
+/*Footer------------------------------------------------------------------------------------------------------------------------------*/
+
+.lupe-info{
+	background:#172437;
+	padding: 2% 0 0 8%;
+}
+
+.lupe-info img{
+	max-width:100%;
+}
+
+.info-logo{
+	margin:15% 0 0 1%;
+}
+
+.lupe-info .description{
+	color:#fff;
+}
+
+.lupe-info .description ul{
+	list-style-type: none;
+	margin-left: -8%;
+}
+
+.lupe-info .description ul li{
+	margin-bottom: 4%;
+	font-size: 1.2em;
+	display:inline;
+}
+
+.apple-download{
+	margin: 4% 0 0 0;
+}
+
+
+.button{
+	padding: 2% 2%;
+	border: 2px solid #fff;
+}
+
+.apple-download a{
+	text-decoration:none;
+	color:#fff;
+}
+
+.contact-lupe{
+/*	background:#C0BDA5;*/
+	text-align: center;
+	padding: .6% 0 1% 0;
+}
+
+.contact-lupe .title{
+	margin-bottom: 1%;
+}
+
+.contact-lupe ul{
+	list-style-type: none;
+	text-align:center;
+}
+
+.contact-lupe ul li{
+	display:inline;
+	margin-right: 5%;
+/*	text-align:center;*/
+}
+
+.contact-lupe ul li i{
+	color:#fbab97;
+}
+
+.contact-lupe ul li a{
+	text-decoration:none;
+	color:#000;
+}
+
+footer{
+	background:#172437;
+	width:100%;
+}
+
+footer .social{
+	padding: .4% 0 0 0;
+}
+
+footer .social ul{
+	text-align:center;
+	list-style-type: none; 
+}
+
+footer .social ul li{
+	margin:0 2.3% 0 0;
+	display:inline;
+}
+
+footer .social ul li a{
+	text-decoration: none;
+}
+
+footer .social ul li a i{
+	color:#fff;
+}
+
+footer .social ul li a i:hover{
+	color:#fbab97;
+}
+
+footer .signature{
+	color:#fff;
+	display:block;
+	text-align:center;
+	padding: .1% 0;
+}
+
+footer .signature i{
+	color:#f5928f;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Typography */
+
+.baskerville{
+	font-family: 'Libre Baskerville', serif; 
+	font-style: italic;
+	font-weight: 400;
+}
+
+.lato{
+	text-transform:uppercase;
+	font-family:'Lato', sans-serif;
+	font-weight: 700;
+}
+
+.lato-small{
+	font-family:'Lato', sans-serif;
+	font-weight:400;
+}
+
+.raleway-small{
+	font-family:'Raleway',cursive;
+	font-weight: 400;
+}
+
+.raleway-large{
+	font-family: 'Raleway', cursive;
+	font-weight: 700;
+}
+
+header .button{
+	font-family: 'Lato'; 
+	font-weight:400;
+	text-transform:uppercase;
+	font-size:.82em;
+}
+
+.name{
+	text-transform:uppercase;
+	font-size: 1.9em;
+	letter-spacing: 2.5px;
+	font-family:'Lato', sans-serif;
+	font-weight:400;
+}
+
+.book{
+	text-transform: uppercase;
+	font-family:'Lato', sans-serif;
+	font-weight:400;
+	letter-spacing:1.4px;
+	font-size: 1.4em;
+}
+
+.bio{
+	font-family: 'Lato', sans-serif;
+	font-weight:300;
+	font-size: 1.3em;
+	letter-spacing: .8px;
+}
+
+.rating .number{
+	font-family:'Lato', sans-serif;
+	font-weight:400;
+	font-size: 1.1em;
+}
+
+.summary-services .individual{
+	font-family:'Lato', sans-serif;
+	font-weight:400;
+	font-size: 1.2em;
+}
+
+.service-name h5{
+	text-transform:uppercase;
+	font-family:'Raleway', sans-serif;
+	color: #000;
+	font-weight: 500;
+	font-size:1.5em;
+}
+
+.service-description{
+	font-family: 'Raleway', cursive;
+	font-weight: 700;
+	color:#585858;
+}
+
+.serviceDescription{
+	font-family: 'Raleway', cursive;
+	font-weight: 700;
+	color:#585858;
+}
+.service-details{
+	font-family:'Raleway', cursive;
+	font-weight: 800;
+	color:#636363;
+	font-size: larger;
+}
+
+#delivery .title {
+	font-family:'Lato', sans-serif;
+	font-weight: 400;
+	font-size:40px;
+}
+
+.delivery .number{
+	font-family: 'Raleway', sans-serif;
+}
+
+.delivery .list p{
+	color:#000;
+}
+
+#reviews .title{
+	font-family:'Lato';
+	font-weight:400;
+	text-align: center;
+	font-size: 40px;
+/*	text-transform:uppercase;*/
+}
+
+.from-lupe{
+	font-family:'Lato';
+	font-weight:400;
+	font-style:italic;
+	text-align: center;
+}
+
+.active-menu{
+	border-bottom: 4px solid #f5928f;
+}
+
+/*Media ------------------------------------------------------------------------------------------------------------------------*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+	.background-div{
+		visibility:hidden;
+	}
+
+	.logo{
+		position:static;
+	}
+
+	.profile-area{
+		margin: -3% 0 0 0;
+	}
+
+	.avatar{
+		max-width:100%;
+		border: none;
+	}
+
+	.contact{
+		margin: 0 0 0 35%;
+	}
+
+	ul.menu{
+		margin:0 0 1% 0;
+	}
+
+	ul.menu li{
+		display: block;
+	}
+
+	.delivery .list ul{
+		position:static;
+	}
+
+	.add-review{
+		position:static;
+		text-align:center;
+	}
+
+	ul.menu li:hover{
+	border-top: 1px solid #000;
+	border-bottom: 4px solid #000;
+	}	
+
+	.contact-lupe ul li{
+	display:block;
+	margin-right: 5%;
+	}
+
+}
+
+
+
+
+

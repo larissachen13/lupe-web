@@ -1,0 +1,423 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+/*--Header --*/
+.header{
+	position: absolute;
+}
+
+.logo{
+	background: #000;
+	position:absolute;
+	z-index: 1;
+	top: 2px;
+	left: 40px;
+}
+
+.background-img{
+	max-width:100%;
+	padding: .65% 0 0 0;
+	position:relative;
+}
+
+/*Body */
+.motto{
+	text-align:center;
+}
+
+/*Profile area */
+.profile-area{
+	padding: 0 0 0 2%;
+}
+
+.profile-fixed{
+	position:fixed;
+	top:0;
+	left: 0;
+}
+
+.profile-absolute{
+	position: absolute;
+	top:150px;
+	left: 10px;
+}
+
+.avatar{
+	max-width:100%;
+/*	margin: -50% 0 0 0;*/
+	border: 7px #fff solid;
+}
+
+.name{
+	margin: 0 0 2% 2%;
+}
+
+.first-name{
+	margin: 0 0 -2.4% 0;
+	padding: 0 0 0 0;
+}
+
+.last-name{
+	margin: 0 0 0 0;
+	padding: 0 0 0 5% ;
+}
+
+ul.menu{
+	list-style-type:none;
+	margin: 2% 0 0 0;
+}
+
+ul.menu li{
+	display:inline;
+	text-align:left;
+	border-top: 1px solid #000;
+}
+
+ul.menu li:hover{
+	border-top: 4px solid #000;
+}
+
+
+
+/*.menu{*/
+/*	border-top: 3px #FFD3DB solid;
+	border-bottom: 3px #FFD3DB solid;
+	outline-top: 3px #282828 solid;
+	outline-bottom: 3px #282828 solid;*/
+	/*margin:0 0 0 15%;
+	padding: 0 5% .5% 0;
+	position: relative;*/
+/*	text-align:left;*/
+/*	border-top: 2px solid;
+	border-bottom: 2px solid;*/
+/*	border: 1px solid ;*/
+}
+/*
+}
+
+.menu:after { 
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 3px;
+  left: 3px;
+  right: -3px;
+  bottom: 3px;
+
+  border-left: 1px solid;
+  border-right: 1px solid;
+}*/
+
+.menu-option{
+	margin:2% 0 1% 5%;
+	padding: 1% 0;
+/*	text-align:center;*/
+}
+
+.motto{
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	color: #000;
+	width:95%;
+}
+
+/*Social Media */
+ul.social 
+{
+	list-style-type: none;
+	margin: 5% 0;
+	text-align: center; 
+}
+ul.social li 
+{
+	display: inline;
+	font-size: 3em; 
+	padding: 0 2%;
+}
+ul.social li a 
+{
+	color: #908D8D;
+	text-decoration: none; 
+}
+ul.social li.facebook a:hover {color: rgb(59,89,152);}
+ul.social li.twitter a:hover {color: rgb(0,172,237);}
+ul.social li.instagram a:hover {color: rgb(81,127,237);}
+ul.social li.youtube a:hover {color: rgb(187,0,0);}
+ul.social li.flickr a:hover {color: rgb(255, 0, 132);}
+ul.social li.linkedin a:hover {color: rgb(59,89,152);}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*Content Area*/
+.content-area{
+	margin-top: -2.5%;
+}
+
+.option{
+	margin: 1% 0 1% 0;
+}
+
+/*About Section */
+.about-content{
+	margin-top: -10%;
+}
+.ellipsis{
+	text-align:center;
+	margin: 0 0 1% 0;
+}
+
+.row-services{
+	text-align:center;
+}
+
+/*.service-name{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+}*/
+
+.service-photo{
+	display:inline-block;
+	margin:0 auto 2% auto;
+	position:relative;
+}
+
+ .opaque{
+ 	opacity: .25;
+ }
+
+.service{
+	text-align:center;
+	margin: 0 0 1% 0;
+/*	border: 1px solid #C0C0C0;*/
+}
+
+.service-info{
+		border: 1px solid #C0C0C0;
+		margin: 0 -1%;
+}
+
+.service-description{
+	position:absolute;
+	text-align:center;
+	top:0;
+	left:0;
+	display: table;
+	z-index: 1;
+}
+.service-description span{
+	display: inline-block;
+	display: table-cell;
+  	vertical-align: middle;
+}
+
+/*Gallery Section*/
+.gallery-photo{
+	padding: 0 1% 1% 0;
+}
+
+#gallery{
+/*	background:#585858;*/
+}
+
+/*Delivery Areas */
+.delivery-info .title{
+	text-align:center;
+}
+
+.delivery-info{
+	background: #DDDDDD;
+	padding: 2% 0 2% 0;
+}
+
+.delivery-info .number{
+	position:relative;
+}
+
+.delivery-info .list{
+	position:absolute;
+/*	top:0;
+	left:0;*/
+	z-index:1;
+	background:#000;
+}
+/*Review Section*/
+.review-block{
+	background: #DDDDDD;
+	padding:3% 0 0 0;
+	position:relative;
+}
+
+.add-review{
+	position:absolute;
+	top: 35px;
+	left: 15px;
+	background: #282828;
+	color:#fff;
+	padding: 1.7% 2.65%;
+}
+
+.lupe-costumers{
+	text-align: center;
+}
+.each-review{
+	margin-top: 4%;
+}
+.individual-review{
+	margin:1% 0 1% 0;
+	padding: 0 0 3% 0;
+	border-bottom: 2px solid #CECECE;
+}
+
+.review-name{
+	margin-bottom: 0;
+}
+
+.review-comment{
+}
+
+.recommended{
+	text-align: right;
+}
+
+.recommended i {color:#C292B1;}
+.vacant{
+	padding: 3% 0 3% 0;
+	text-align:center;
+	background:#DDDDDD;
+}
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/*Typography and Styling*/
+.motto-main{
+	text-transform: uppercase;
+	font-family: Lato;
+	font-size: 1.5em;
+}
+
+.motto-minor{
+	font-family: Lato;
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+.name{
+/*	text-transform: uppercase;*/
+	/*font-family: 'Shadows Into Light', cursive;*/
+	font-weight:700;
+	letter-spacing: 1.5px;
+}
+
+.first-name{
+	font-family: 'Josefin Sans', cursive;
+	font-size:3em;
+}
+
+.last-name{
+	font-family: 'Josefin Sans';
+	font-weight: 400;
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+.personal-option{
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Old Standard TT', serif;
+	color: #fff;
+}
+
+.menu-option{
+	text-transform: uppercase;
+	font-family: 'Libre Baskerville', sans-serif;
+	font-weight: 400;
+	font-size: .9em;
+	text-decoration: none;
+	color: #000;
+}
+
+.menu a{
+	text-decoration: none;
+}
+
+.menu-option a:hover {
+    font-weight: 700; !important;
+}
+
+.menu-clicked{
+	text-decoration: underline;
+}
+
+.motto .main{
+	font-family:'Josefin Sans';
+	text-transform: uppercase;
+}
+
+.motto .minor{
+	font-family:'Libre Baskerville';
+	font-style: italic;
+}
+
+.option{
+	text-transform: uppercase;
+	background: #282828;
+	font-family: 'Josefin Sans', cursive;
+	color: #fff;
+	text-align: center;
+
+}
+
+.bio{
+	font-family: 'Josefin Slab', sans-serif;
+	font-style: italic;
+	text-align:center;
+}
+
+.service-name{
+	text-transform:uppercase;
+	font-family:'Raleway', sans-serif;
+	color: #000;
+	font-weight: 400;
+}
+
+.service-description{
+	font-family: 'Raleway', cursive;
+	font-weight: 700;
+	color:#585858;
+}
+
+.from-lupe{
+	text-align: center;
+}
+
+.delivery-info .title{
+
+}
+
+.baskerville{
+	font-family: 'Libre Baskerville', serif; 
+	font-style: italic;
+	font-weight: 400;
+}
+
+.lato{
+	text-transform:uppercase;
+	font-family:'Lato';
+	font-weight: 700;
+	font-size: 1.05em;
+}
+
+.lato-small{
+	font-family:'Lato';
+	font-weight:400;
+
+}
